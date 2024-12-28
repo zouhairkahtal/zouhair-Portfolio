@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans", serif;
+  transition: 150ms ease-in;
+}
+/* Light Mode */
+:root {
+  --background: #f9fafb;
+  --primary-text: #1f2937;
+  --accent-color: #3b82f6;
+  --secondary-color: #10b981;
+}
+
+/* Dark Mode */
+:root {
+  --background-d: #121212;
+  --primary-text-d: #e5e7eb;
+  --accent-color-d: #60a5fa;
+  --secondary-color-d: #34d399;
+}
+body {
+  background-color: var(--background);
+}
+header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 8rem;
+  width: 100%;
+  position: fixed;
+}
+header div {
+  width: 80%;
+}
+header div nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  border-radius: 5rem;
+  background-color: #fff;
+  height: 5rem;
+}
+header div nav:hover {
+  box-shadow: 0px 10px 13px 0px rgba(16, 185, 129, 0.36);
+  -webkit-box-shadow: 0px 10px 13px 0px rgba(16, 185, 129, 0.36);
+  -moz-box-shadow: 0px 10px 13px 0px rgba(16, 185, 129, 0.36);
+}
+header div nav h1 {
+  color: var(--primary-text);
+  font-weight: 800;
+}
+header div nav h1::first-letter {
+  color: var(--secondary-color);
+}
+header div nav h1:hover {
+  transform: scale(1.05);
+}
+header div nav ul {
+  display: flex;
+  gap: 0 2rem;
+  list-style: none;
+}
+header div nav ul li {
+  color: var(--primary-text);
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 15px;
+}
+header div nav ul li:hover {
+  color: var(--secondary-color);
+}
+header div nav button {
+  background-color: transparent;
+  border: none;
+}
+header div nav button #light-mode {
+  display: none;
+}
+
+.section1{
+    width: 100%;
+    height: 100vh;
+    min-height: 630px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section1 .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    max-width: 2000px;
+    padding: 0 0 0 2rem;
+}
+.section1 .info .info-text h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.section1 .info .info-text h1{
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    
+}
+.section1 .info .info-text h1::first-letter{
+    color: var(--secondary-color);
+}
+.section1 .info .info-text p{
+    font-size: 36px;
+}
+.section1 .info .info-text .p-l-icon{
+    margin-top: 20px;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.section1 .info .info-text .p-l-icon svg:hover{
+    fill:var(--secondary-color);
+}
+.section1 .info-image{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.section1 .info-image img{
+    /* width: 20rem;
+    height: 20rem; */
+    width: 70%;
+    height: 70%;
+    border-radius: 100%;
+    border: 2px dashed  var(--secondary-color);
+}
+
+
+@media (max-width: 1020px) {
+  header div nav ul {
+    gap: 0 0;
+  }
+  .section1{
+    min-height: 800px;
+}
+  .section1 .info{
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+.section1 .info-image{
+    margin-bottom: 4rem;
+    min-width: 250px;
+    height: 50%;
+    justify-content: center;    
+}
+.section1 .info .info-text h2,.section1 .info .info-text h1,.section1 .info .info-text p{
+    text-align: center;
+}
+.section1 .info{
+    padding: 0 0 0 0;
+}
+}
+@media (max-width: 800px) {
+  header div nav ul {
+    display: none;
+  }
+  .section1 .info .info-text h2{
+    font-size: 35px;
+}
+.section1 .info .info-text h1{
+    font-size: 55px;    
+}
+.section1 .info .info-text p{
+    font-size: 31px;
+}
+}
