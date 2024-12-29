@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Public Sans", serif;
-  transition: 150ms ease-in;
+  transition: 180ms ease-out;
 }
 /* Light Mode */
 :root {
@@ -22,6 +22,10 @@
 }
 body {
   background-color: var(--background);
+}
+::selection {
+  background-color: #FFD700; /* Gold background */
+  color: #000000; /* Black text */
 }
 header {
   display: flex;
@@ -96,6 +100,11 @@ header div nav button #light-mode {
     max-width: 2000px;
     padding: 0 0 0 2rem;
 }
+.section1 .info .info-text{
+  animation: appear 0.5s ease-out;
+  /* animation-timeline: view();
+  animation-range: entry 0 cover 40%; */
+}
 .section1 .info .info-text h2{
     font-size: 40px;
     font-weight: 700;
@@ -130,6 +139,7 @@ header div nav button #light-mode {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    animation: appear1 0.5s ease-out;
 }
 .section1 .info-image img{
     /* width: 20rem;
@@ -140,7 +150,33 @@ header div nav button #light-mode {
     border: 2px dashed  var(--secondary-color);
 }
 
+/* Animations */
+@keyframes appear{
+  from{
+    opacity: 0;
+    scale: 0.9;
+    transform: translateX(-100px);
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes appear1{
+  from{
+    opacity: 0;
+    scale: 0.9;
+    transform: translateX(+100px);
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+    transform: translateX(0px);
+  }
+}
 
+/*  */
 @media (max-width: 1020px) {
   header div nav ul {
     gap: 0 0;
