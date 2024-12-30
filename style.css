@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Public Sans", serif;
   transition: 180ms ease-out;
+  scroll-behavior: smooth;
 }
 /* Light Mode */
 :root {
@@ -24,7 +25,7 @@ body {
   background-color: var(--background);
 }
 ::selection {
-  background-color: #FFD700; /* Gold background */
+  background-color: #ffd90085; /* Gold background */
   color: #000000; /* Black text */
 }
 header {
@@ -34,6 +35,7 @@ header {
   height: 8rem;
   width: 100%;
   position: fixed;
+  z-index: 99;
 }
 header div {
   width: 80%;
@@ -46,6 +48,7 @@ header div nav {
   border-radius: 5rem;
   background-color: #fff;
   height: 5rem;
+  z-index: 1;
 }
 header div nav:hover {
   box-shadow: 0px 10px 13px 0px rgba(16, 185, 129, 0.36);
@@ -59,6 +62,9 @@ header div nav h1 {
 header div nav h1::first-letter {
   color: var(--secondary-color);
 }
+.name{
+  color: var(--secondary-color);
+}
 header div nav h1:hover {
   transform: scale(1.05);
 }
@@ -68,13 +74,24 @@ header div nav ul {
   list-style: none;
 }
 header div nav ul li {
-  color: var(--primary-text);
   font-weight: 700;
   text-transform: capitalize;
   padding: 15px;
 }
-header div nav ul li:hover {
+
+header div nav ul li a{
+  text-decoration: none;
+  color: var(--primary-text);
+  font-size: 18px;
+}
+header div nav ul li a:hover {
   color: var(--secondary-color);
+}
+.active{
+  background-color: #FFD700;
+}
+.active:hover{
+  color: #ffffffdc;
 }
 header div nav button {
   background-color: transparent;
@@ -87,7 +104,7 @@ header div nav button #light-mode {
 .section1{
     width: 100%;
     height: 100vh;
-    min-height: 630px;
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,10 +119,9 @@ header div nav button #light-mode {
 }
 .section1 .info .info-text{
   animation: appear 0.5s ease-out;
-  /* animation-timeline: view();
-  animation-range: entry 0 cover 40%; */
 }
 .section1 .info .info-text h2{
+    color: var(--primary-text);
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 16px;
@@ -114,13 +130,14 @@ header div nav button #light-mode {
     font-size: 60px;
     font-weight: 800;
     margin-bottom: 16px;
-    
+    color: var(--primary-text);
 }
 .section1 .info .info-text h1::first-letter{
     color: var(--secondary-color);
 }
 .section1 .info .info-text p{
     font-size: 36px;
+    color: var(--primary-text);
 }
 .section1 .info .info-text .p-l-icon{
     margin-top: 20px;
@@ -140,6 +157,7 @@ header div nav button #light-mode {
     align-items: center;
     justify-content: flex-end;
     animation: appear1 0.5s ease-out;
+  
 }
 .section1 .info-image img{
     /* width: 20rem;
@@ -149,7 +167,63 @@ header div nav button #light-mode {
     border-radius: 100%;
     border: 2px dashed  var(--secondary-color);
 }
-
+.section2{
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section2 .div-about{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  max-width: 2000px;
+}
+.section2 .div-about .about-image{
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: appear 0.5s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+  }
+  .section2 .div-about .about-image img{
+    width: 100%;
+    height: 100%;
+    border: 2px dashed  var(--secondary-color);
+    border-radius: 4%;
+  }
+  .section2 .div-about .about-text{
+    width: 60%;
+    padding: 3rem 0 3rem 6rem;
+    animation: appear1 0.5s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;  
+  }
+  .section2 .div-about .about-text h1{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--primary-text);
+  }
+  .section2 .div-about .about-text p{
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #424e5e;
+  }
+  .section2 .div-about .about-text q{
+    background-color: var(--secondary-color); /* Gold background */
+    color: #000000a4;
+    user-select: none;
+  }
 /* Animations */
 @keyframes appear{
   from{
@@ -177,6 +251,19 @@ header div nav button #light-mode {
 }
 
 /*  */
+@media (max-width: 1220px) {
+  .section2 .div-about .about-text h1{
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+  .section2 .div-about .about-text p{
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  .section2 .div-about .about-text{
+    padding: 1rem 0 1rem 3rem;
+  }
+}
 @media (max-width: 1020px) {
   header div nav ul {
     gap: 0 0;
@@ -199,6 +286,13 @@ header div nav button #light-mode {
 }
 .section1 .info{
     padding: 0 0 0 0;
+}
+.section2 .div-about{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 2000px;
 }
 }
 @media (max-width: 800px) {
