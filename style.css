@@ -6,6 +6,7 @@
   transition: 180ms ease-out;
   scroll-behavior: smooth;
 }
+
 /* Light Mode */
 :root {
   --background: #f9fafb;
@@ -62,7 +63,7 @@ header div nav h1 {
 header div nav h1::first-letter {
   color: var(--secondary-color);
 }
-.name{
+.name {
   color: var(--secondary-color);
 }
 header div nav h1:hover {
@@ -79,7 +80,7 @@ header div nav ul li {
   padding: 15px;
 }
 
-header div nav ul li a{
+header div nav ul li a {
   text-decoration: none;
   color: var(--primary-text);
   font-size: 18px;
@@ -87,10 +88,10 @@ header div nav ul li a{
 header div nav ul li a:hover {
   color: var(--secondary-color);
 }
-.active{
-  background-color: #FFD700;
+.active {
+  background-color: #ffd700;
 }
-.active:hover{
+.active:hover {
   color: #ffffffdc;
 }
 header div nav button {
@@ -101,73 +102,73 @@ header div nav button #light-mode {
   display: none;
 }
 
-.section1{
-    width: 100%;
-    height: 100vh;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.section1 {
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.section1 .info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 70%;
-    max-width: 2000px;
-    padding: 0 0 0 2rem;
+.section1 .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  max-width: 2000px;
+  padding: 0 0 0 2rem;
 }
-.section1 .info .info-text{
+.section1 .info .info-text {
   animation: appear 0.5s ease-out;
 }
-.section1 .info .info-text h2{
-    color: var(--primary-text);
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 16px;
+.section1 .info .info-text h2 {
+  color: var(--primary-text);
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
-.section1 .info .info-text h1{
-    font-size: 60px;
-    font-weight: 800;
-    margin-bottom: 16px;
-    color: var(--primary-text);
+.section1 .info .info-text h1 {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--primary-text);
 }
-.section1 .info .info-text h1::first-letter{
-    color: var(--secondary-color);
+.section1 .info .info-text h1::first-letter {
+  color: var(--secondary-color);
 }
-.section1 .info .info-text p{
-    font-size: 36px;
-    color: var(--primary-text);
+.section1 .info .info-text p {
+  font-size: 36px;
+  color: var(--primary-text);
 }
-.section1 .info .info-text .p-l-icon{
-    margin-top: 20px;
-    width: 20rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.section1 .info .info-text .p-l-icon {
+  margin-top: 20px;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.section1 .info .info-text .p-l-icon svg:hover{
-    fill:var(--secondary-color);
+.section1 .info .info-text .p-l-icon svg:hover {
+  fill: var(--secondary-color);
 }
-.section1 .info-image{
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    animation: appear1 0.5s ease-out;
-  
+
+.section1 .info-image {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  animation: appear1 0.5s ease-out;
 }
-.section1 .info-image img{
-    /* width: 20rem;
+.section1 .info-image img {
+  /* width: 20rem;
     height: 20rem; */
-    width: 70%;
-    height: 70%;
-    border-radius: 100%;
-    border: 2px dashed  var(--secondary-color);
+  width: 70%;
+  height: 70%;
+  border-radius: 100%;
+  border: 2px dashed var(--secondary-color);
 }
-.section2{
+.section2 {
   width: 100%;
   height: 100vh;
   min-height: 500px;
@@ -176,14 +177,14 @@ header div nav button #light-mode {
   align-items: center;
   justify-content: center;
 }
-.section2 .div-about{
+.section2 .div-about {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 70%;
   max-width: 2000px;
 }
-.section2 .div-about .about-image{
+.section2 .div-about .about-image {
   width: 40%;
   height: 100%;
   overflow: hidden;
@@ -193,57 +194,140 @@ header div nav button #light-mode {
   animation: appear 0.5s ease-out;
   animation-timeline: view();
   animation-range: entry 0 cover 40%;
-  }
-  .section2 .div-about .about-image img{
-    width: 100%;
-    height: 100%;
-    border: 2px dashed  var(--secondary-color);
-    border-radius: 4%;
-  }
-  .section2 .div-about .about-text{
-    width: 60%;
-    padding: 3rem 0 3rem 6rem;
-    animation: appear1 0.5s ease-out;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;  
-  }
-  .section2 .div-about .about-text h1{
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 16px;
-    color: var(--primary-text);
-  }
-  .section2 .div-about .about-text p{
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #424e5e;
-  }
-  .section2 .div-about .about-text q{
-    background-color: var(--secondary-color); /* Gold background */
-    color: #000000a4;
-    user-select: none;
-  }
+}
+.section2 .div-about .about-image img {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed var(--secondary-color);
+  border-radius: 4%;
+}
+.section2 .div-about .about-text {
+  width: 60%;
+  padding: 3rem 0 3rem 6rem;
+  animation: appear1 0.5s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+.section2 .div-about .about-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--primary-text);
+}
+.section2 .div-about .about-text p {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #424e5e;
+}
+.section2 .div-about .about-text q {
+  /* background-color: var(--secondary-color); Gold background */
+  color: var(--secondary-color);
+  user-select: none;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.section2 .about-text .accounts{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+.section2 .about-text .accounts a .svg{
+  width: 50px;
+  height: 50px;
+}
+.section2 .about-text .accounts a .svg:hover {
+  fill: var(--secondary-color);
+}
+
+.div-wrapper {
+  animation: appear1 0.5s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper {
+  --font-color-dark: #fefefe;
+  --font-color-light: #111;
+  --bg-color: #10b981;
+  --main-color: #fefefe;
+  width: 10px;
+  height: 300px;
+  background-color: var(--bg-color);
+  border-radius: 34px;
+  padding: 2px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.option {
+  width: 80%;
+  height: 80px;
+  position: relative;
+  top: 1px;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  appearance: none;
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.span {
+  color: var(--font-color-dark);
+}
+
+.input:checked + .btn {
+  background-color: var(--main-color);
+}
+
+.input:checked + .btn .span {
+  color: var(--font-color-light);
+}
 /* Animations */
-@keyframes appear{
-  from{
+@keyframes appear {
+  from {
     opacity: 0;
     scale: 0.9;
     transform: translateX(-100px);
   }
-  to{
+  to {
     opacity: 1;
     scale: 1;
     transform: translateX(0px);
   }
 }
-@keyframes appear1{
-  from{
+@keyframes appear1 {
+  from {
     opacity: 0;
     scale: 0.9;
     transform: translateX(+100px);
   }
-  to{
+  to {
     opacity: 1;
     scale: 1;
     transform: translateX(0px);
@@ -251,16 +335,16 @@ header div nav button #light-mode {
 }
 
 /*  */
-@media (max-width: 1220px) {
-  .section2 .div-about .about-text h1{
+@media (max-width: 1350px) {
+  .section2 .div-about .about-text h1 {
     font-size: 30px;
     margin-bottom: 12px;
   }
-  .section2 .div-about .about-text p{
+  .section2 .div-about .about-text p {
     margin-bottom: 8px;
     font-size: 16px;
   }
-  .section2 .div-about .about-text{
+  .section2 .div-about .about-text {
     padding: 1rem 0 1rem 3rem;
   }
 }
@@ -268,44 +352,141 @@ header div nav button #light-mode {
   header div nav ul {
     gap: 0 0;
   }
-  .section1{
+  .section1 {
     min-height: 800px;
-}
-  .section1 .info{
+  }
+  .section1 .info {
     justify-content: center;
     flex-direction: column-reverse;
-}
-.section1 .info-image{
+  }
+  .section1 .info-image {
     margin-bottom: 4rem;
     min-width: 250px;
     height: 50%;
-    justify-content: center;    
-}
-.section1 .info .info-text h2,.section1 .info .info-text h1,.section1 .info .info-text p{
+    justify-content: center;
+  }
+  .section1 .info .info-text h2,
+  .section1 .info .info-text h1,
+  .section1 .info .info-text p {
     text-align: center;
-}
-.section1 .info{
+  }
+  .section1 .info {
     padding: 0 0 0 0;
-}
-.section2 .div-about{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 95%;
-  max-width: 2000px;
-}
+  }
+  .section2 .div-about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 2000px;
+  }
+  .section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  .div-wrapper {
+    width: 60%;
+    min-width: 546px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  .wrapper {
+    width: 300px;
+    height: 10px;
+    padding: 2px;
+    flex-direction: row;
+  }
+
+  .option {
+    width: 80px;
+    height: 80%;
+    top: 0;
+  }
+
 }
 @media (max-width: 800px) {
   header div nav ul {
     display: none;
   }
-  .section1 .info .info-text h2{
+  .section1 .info .info-text h2 {
     font-size: 35px;
-}
-.section1 .info .info-text h1{
-    font-size: 55px;    
-}
-.section1 .info .info-text p{
+  }
+  .section1 .info .info-text h1 {
+    font-size: 55px;
+  }
+  .section1 .info .info-text p {
     font-size: 31px;
-}
+  }
+  .section2 {
+    width: 100%;
+    height: 1000px;
+    min-height: 1000px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .section2 .div-about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    width: 80%;
+    max-width: 2000px;
+  }
+  .section2 .div-about .about-image {
+    width: 50%;
+    height: 50%;
+    animation-range: entry 0 cover 20%;
+  }
+
+  .section2 .div-about .about-text {
+    width: 100%;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  .section2 .div-about .about-text h1 {
+    animation: appear1 0.5s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--primary-text);
+  }
+  .section2 .div-about .about-text p {
+    animation: appear 0.5s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #424e5e;
+  }
+  .section2 .div-about .about-text q {
+    /* background-color: var(--secondary-color); Gold background */
+    color: var(--secondary-color);
+    animation: appear 0.5s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+    user-select: none;
+  }
+  .div-wrapper {
+    animation: appear 0.5s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+    width: 95%;
+    min-width: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+  .section2 .about-text .accounts{
+    margin-top: 0rem;
+    justify-content: center;
+    width: 100%;
+    gap: 0 10%;
+  }
 }
