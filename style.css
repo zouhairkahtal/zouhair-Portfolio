@@ -89,6 +89,13 @@ header div nav ul li a {
 header div nav ul li a:hover {
   color: var(--secondary-color);
 }
+.icon-nav {
+  display: none;
+  user-select: none;
+}
+.icon-nav:hover {
+  fill: var(--secondary-color);
+}
 .active {
   background-color: #ffd700;
 }
@@ -226,42 +233,43 @@ header div nav button #light-mode {
   color: var(--secondary-color);
   user-select: none;
 }
-.uppercase{
+.uppercase {
   text-transform: uppercase;
 }
-.section2 .about-text .accounts{
+.section2 .about-text .accounts {
   margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 200px;
 }
-.section2 .about-text .accounts a .svg{
+.section2 .about-text .accounts a .svg {
   width: 50px;
   height: 50px;
 }
-.section2 .about-text .accounts a .svg:hover,.skills .div-skills div svg:hover{
+.section2 .about-text .accounts a .svg:hover,
+.skills .div-skills div svg:hover {
   fill: var(--secondary-color);
 }
-.skills{
+.skills {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height:15rem;
+  height: 15rem;
   width: 100%;
 }
-.skills .div-skills{
+.skills .div-skills {
   height: 100%;
   width: 30%;
 }
-.skills .div-skills div{
+.skills .div-skills div {
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 100%;
   flex-direction: column;
 }
-.skills .div-skills div svg{
+.skills .div-skills div svg {
   width: 100px;
   height: 100px;
 }
@@ -337,7 +345,6 @@ header div nav button #light-mode {
     box-shadow: 0px 10px 13px 0px rgba(16, 185, 129, 0.36);
     -webkit-box-shadow: 0px 10px 13px 0px rgba(16, 185, 129, 0.36);
     -moz-box-shadow: 0px 10px 13px 0px rgba(16, 185, 129, 0.36);
-
   }
 }
 @keyframes appear {
@@ -436,15 +443,37 @@ header div nav button #light-mode {
     height: 80%;
     top: 0;
   }
-
 }
-@media (max-width: 450px) {
-  header div nav ul {
+@media (max-width: 420px) {
+  header div nav h1 {
     display: none;
   }
-
 }
-@media (max-width: 600px) {
+@media (max-width: 550px) {
+  header div {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0px 0px 6px 2px rgba(16, 185, 129, 1);
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(16, 185, 129, 1);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(16, 185, 129, 1);
+  }
+  header div nav {
+    border-radius: 0;
+  }
+  .active {
+    background-color: transparent;
+  }
+  header {
+    bottom: 0px;
+  }
+  .a-span {
+    display: none;
+  }
+  .icon-nav {
+    display: block;
+  }
+}
+@media (max-width: 700px) {
   header div {
     width: 99%;
   }
@@ -455,22 +484,22 @@ header div nav button #light-mode {
   header div nav ul li {
     font-weight: 500;
     text-transform: capitalize;
-    padding: 8px 10px;
   }
-  header div nav ul li a{
+  header div nav ul li a {
     font-size: 15px;
+    padding: 0 5px;
   }
 }
 @media (max-width: 800px) {
   header div nav ul li {
-    font-weight: 300;
+    font-weight: 400;
     text-transform: capitalize;
-    padding: 8px 4px;
+    padding: 8px 10px;
   }
-  header div nav ul li a{
-    font-size: 15px;
+  header div nav ul li a {
+    font-size: 18px;
   }
-  
+
   .section1 .info .info-text h2 {
     font-size: 35px;
   }
@@ -543,7 +572,7 @@ header div nav button #light-mode {
     justify-content: center;
     align-items: center;
   }
-  .section2 .about-text .accounts{
+  .section2 .about-text .accounts {
     margin-top: 0;
     justify-content: center;
     width: 100%;

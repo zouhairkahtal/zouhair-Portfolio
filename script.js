@@ -1,5 +1,5 @@
 const section = document.querySelectorAll("section");
-const navItems = document.querySelectorAll(" header nav a");
+const navItems = document.querySelectorAll(" header nav a ");
 
 window.onscroll = () => {
   section.forEach((sec) => {
