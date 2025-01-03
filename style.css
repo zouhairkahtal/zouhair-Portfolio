@@ -10,17 +10,29 @@
 /* Light Mode */
 :root {
   --background: #f9fafb;
+  --background-2: #fff;
   --primary-text: #1f2937;
-  --accent-color: #3b82f6;
+  --secondary-text: #424e5e;
   --secondary-color: #10b981;
+  --secondary-color2: #10b981;
+  --icone-fill: #1f2937;
 }
 
 /* Dark Mode */
-:root {
-  --background-d: #121212;
-  --primary-text-d: #e5e7eb;
-  --accent-color-d: #60a5fa;
-  --secondary-color-d: #34d399;
+.darkmode{
+  --background: #000601;
+  --background-2: #000000;
+  --primary-text: #ffffff;
+  --secondary-text: #dadada;
+  --secondary-color: #10b981;
+  --secondary-color2: #ffffff;
+  --icone-fill: #fff;
+}
+svg{
+  fill: var(--primary-text);
+}
+button{
+  cursor: pointer;
 }
 body {
   background-color: var(--background);
@@ -47,7 +59,7 @@ header div nav {
   justify-content: space-between;
   padding: 0 2rem;
   border-radius: 5rem;
-  background-color: #fff;
+  background-color: var(--background-2);
   animation: mymove 5s infinite ease-out;
   height: 5rem;
   z-index: 1;
@@ -92,6 +104,7 @@ header div nav ul li a:hover {
 .icon-nav {
   display: none;
   user-select: none;
+  fill: var(--icone-fill);
 }
 .icon-nav:hover {
   fill: var(--secondary-color);
@@ -174,13 +187,13 @@ header div nav button #light-mode {
   width: 70%;
   height: 70%;
   border-radius: 100%;
-  border: 2px dashed var(--secondary-color);
+  border: 2px dashed var(--secondary-color2);
 }
 .section2 {
   width: 100%;
   height: 100vh;
   min-height: 500px;
-  background-color: #fff;
+  background-color: var(--background-2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,7 +219,7 @@ header div nav button #light-mode {
 .section2 .div-about .about-image img {
   width: 100%;
   height: 100%;
-  border: 2px dashed var(--secondary-color);
+  border: 2px dashed var(--secondary-color2);
   border-radius: 4%;
 }
 .section2 .div-about .about-text {
@@ -226,7 +239,7 @@ header div nav button #light-mode {
   font-weight: 600;
   margin-bottom: 10px;
   font-size: 16px;
-  color: #424e5e;
+  color: var(--secondary-text);
 }
 .section2 .div-about .about-text q {
   /* background-color: var(--secondary-color); Gold background */
@@ -513,7 +526,6 @@ header div nav button #light-mode {
     width: 100%;
     height: 1000px;
     min-height: 1000px;
-    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -544,7 +556,6 @@ header div nav button #light-mode {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 16px;
-    color: var(--primary-text);
   }
   .section2 .div-about .about-text p {
     animation: appear 0.5s ease-out;
@@ -553,7 +564,6 @@ header div nav button #light-mode {
     font-weight: 600;
     margin-bottom: 10px;
     font-size: 16px;
-    color: #424e5e;
   }
   .section2 .div-about .about-text q {
     /* background-color: var(--secondary-color); Gold background */
