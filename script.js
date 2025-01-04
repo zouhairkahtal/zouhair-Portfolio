@@ -75,8 +75,8 @@ btn3.addEventListener("click", () => {
                         `;
 });
 /////////
-const clickSound = new Audio();
-clickSound.src = "/sound/click.wav";
+// const clickSound = new Audio();
+// clickSound.src = "/sound/click.wav";
 /////////////////////////
 /////////
 const clickSound2 = new Audio();

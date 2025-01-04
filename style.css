@@ -16,17 +16,26 @@
   --secondary-color: #10b981;
   --secondary-color2: #10b981;
   --icone-fill: #1f2937;
+  --links-back:  #ffd700;
 }
 
 /* Dark Mode */
 .darkmode{
-  --background: #000601;
+  /* --background: #000601;
   --background-2: #000000;
-  --primary-text: #ffffff;
+  --primary-text: #f1f1f1;
   --secondary-text: #dadada;
   --secondary-color: #10b981;
   --secondary-color2: #ffffff;
-  --icone-fill: #fff;
+  --icone-fill: #fff; */
+  --links-back:  #ffffff;
+  --background: #121212; /* Dark background */
+  --background-2: #1e1e1e; /* Slightly lighter for contrast */
+  --primary-text: #e5e7eb; /* Light gray for primary text */
+  --secondary-text: #9ca3af; /* Medium gray for secondary text */
+  --secondary-color: #34d399; /* Brighter green for dark mode */
+  --secondary-color2: #ffffff; /* A slightly darker green for variation */
+  --icone-fill: #f3f4f6; /* Light color for icons */
 }
 svg{
   fill: var(--primary-text);
@@ -38,7 +47,7 @@ body {
   background-color: var(--background);
 }
 ::selection {
-  background-color: #ffd90085; /* Gold background */
+  background-color: var(--links-back); /* Gold background */
   color: #000000; /* Black text */
 }
 header {
@@ -110,10 +119,11 @@ header div nav ul li a:hover {
   fill: var(--secondary-color);
 }
 .active {
-  background-color: #ffd700;
+  background-color: var(--links-back);
+  color: #000;
 }
 .active:hover {
-  color: #ffffffdc;
+  color: #ffffff;
 }
 header div nav button {
   background-color: transparent;
