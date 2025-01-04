@@ -123,7 +123,7 @@ header div nav ul li a:hover {
   color: #000;
 }
 .active:hover {
-  color: #ffffff;
+  color: #4b4b4b;
 }
 header div nav button {
   background-color: transparent;
