@@ -16,12 +16,19 @@
   --secondary-color: #10b981;
   --secondary-color2: #10b981;
   --icone-fill: #1f2937;
-  --links-back: #ffd700;
+  --links-back:  #ffd700;
 }
 
 /* Dark Mode */
-.darkmode {
-  --links-back: #ffffff;
+.darkmode{
+  /* --background: #000601;
+  --background-2: #000000;
+  --primary-text: #f1f1f1;
+  --secondary-text: #dadada;
+  --secondary-color: #10b981;
+  --secondary-color2: #ffffff;
+  --icone-fill: #fff; */
+  --links-back:  #ffffff;
   --background: #121212; /* Dark background */
   --background-2: #1e1e1e; /* Slightly lighter for contrast */
   --primary-text: #e5e7eb; /* Light gray for primary text */
@@ -30,10 +37,10 @@
   --secondary-color2: #ffffff; /* A slightly darker green for variation */
   --icone-fill: #f3f4f6; /* Light color for icons */
 }
-svg {
+svg{
   fill: var(--primary-text);
 }
-button {
+button{
   cursor: pointer;
 }
 body {
@@ -387,7 +394,6 @@ header div nav button #light-mode {
     transform: translateX(0px);
   }
 }
-
 .section3 {
   width: 100%;
   height: 100vh;
@@ -461,13 +467,8 @@ header div nav button #light-mode {
 .item-4 {
   grid-row: 1 / span 6; /* Span 6 rows */
 }
-/*  */
-@media (min-height:1200px){
-  .section3 {
-    align-content: center;
-  }
-}
-@media (min-width: 1350px){
+
+@media (max-width: 1350px) {
   .section2 .div-about .about-text h1 {
     font-size: 30px;
     margin-bottom: 12px;
@@ -565,9 +566,6 @@ header div nav button #light-mode {
   }
   .icon-nav {
     display: block;
-  }
-  .section3 {
-    align-content: start;
   }
   .item {
     height: 470px;
@@ -682,6 +680,7 @@ header div nav button #light-mode {
     gap: 0 10%;
   }
 }
+
 @media (max-width: 1040px) {
   .section3 {
     min-height: 2300px;
