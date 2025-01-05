@@ -408,22 +408,12 @@ header div nav button #light-mode {
   padding: 8px;
   border-radius: 15px;
   transition: 0.4s;
+  overflow: hidden;
 }
 /* From Uiverse.io by Sashank02 */ 
 
 .item:hover {
   translate: 0 -5px;
-}
-
-.item-title {
-  font-size: 150% ;
-  font-weight: 700;
-  color: var(--secondary-color);
-  margin: 10% 0 0 5%;
-}
-.item-title-st2{
-  margin: 5% 0 0 2%;
-  font-size: 150% ;
 }
 
 .item-image {
@@ -438,20 +428,18 @@ header div nav button #light-mode {
   object-fit: contain;
 }
 
-.item-body {
-  display: flex;
-  align-items: center;
-  color: var(--primary-text);
-  font-size: 100%;
-  height: 25%;
-  margin-bottom: 5px;
+.item-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin: 1rem 0;
+  text-align: center;
 }
-
-
-.footer {
-  float: right;
-  font-size: 13px;
-  color: var(--secondary-text);
+.item-body {
+  text-align: center;
+  color: var(--primary-text);
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 
 /* Item spanning all rows */
@@ -474,7 +462,12 @@ header div nav button #light-mode {
   grid-row: 1 / span 6; /* Span 6 rows */
 }
 /*  */
-@media (max-width: 1350px) {
+@media (min-height:1200px){
+  .section3 {
+    align-content: center;
+  }
+}
+@media (min-width: 1350px){
   .section2 .div-about .about-text h1 {
     font-size: 30px;
     margin-bottom: 12px;
@@ -572,6 +565,18 @@ header div nav button #light-mode {
   }
   .icon-nav {
     display: block;
+  }
+  .section3 {
+    align-content: start;
+  }
+  .item {
+    height: 470px;
+  }
+  .item-body {
+    font-size: 15px;
+  }
+  .item-title{
+    font-size: 25px;
   }
 }
 @media (max-width: 700px) {
@@ -675,5 +680,21 @@ header div nav button #light-mode {
     justify-content: center;
     width: 100%;
     gap: 0 10%;
+  }
+}
+@media (max-width: 1040px) {
+  .section3 {
+    min-height: 2300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .item {
+    width: 80%; 
+    max-width: 500px;
+  }
+  .item-body {
+    margin-bottom: 2rem;
   }
 }
