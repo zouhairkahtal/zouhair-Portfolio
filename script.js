@@ -95,3 +95,19 @@ lightmode.addEventListener('click',()=>{
     darkmode.style.display="block"
     document.body.classList.remove('darkmode')
 })
+////////////////////////////////////////////
+
+let cards = document.querySelectorAll(".item")
+cards.forEach(card =>{
+    card.onmousemove = function(e){
+        card.classList.add('item-x')
+        let x = e.pageX - card.offsetLeft;
+        let y = e.pageY - card.offsetTop;
+
+        card.style.setProperty('--x',x+'px')
+        card.style.setProperty('--y',y+'px')
+    } 
+    card.onmouseout = function(e){
+        card.classList.remove('item-x')
+    } 
+})
