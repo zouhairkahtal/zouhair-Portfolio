@@ -16,19 +16,13 @@
   --secondary-color: #10b981;
   --secondary-color2: #10b981;
   --icone-fill: #1f2937;
-  --links-back:  #ffd700;
+  --links-back: #ffd700;
+  --icon-fill2: #f3f4f6;
 }
 
 /* Dark Mode */
-.darkmode{
-  /* --background: #000601;
-  --background-2: #000000;
-  --primary-text: #f1f1f1;
-  --secondary-text: #dadada;
-  --secondary-color: #10b981;
-  --secondary-color2: #ffffff;
-  --icone-fill: #fff; */
-  --links-back:  #ffffff;
+.darkmode {
+  --links-back: #ffffff;
   --background: #121212; /* Dark background */
   --background-2: #1e1e1e; /* Slightly lighter for contrast */
   --primary-text: #e5e7eb; /* Light gray for primary text */
@@ -36,11 +30,12 @@
   --secondary-color: #34d399; /* Brighter green for dark mode */
   --secondary-color2: #ffffff; /* A slightly darker green for variation */
   --icone-fill: #f3f4f6; /* Light color for icons */
+  --icon-fill2: #10b981;
 }
-svg{
+svg {
   fill: var(--primary-text);
 }
-button{
+button {
   cursor: pointer;
 }
 body {
@@ -178,7 +173,7 @@ header div nav button #light-mode {
   align-items: center;
   justify-content: space-between;
 }
-.section1 .info .info-text .p-l-icon svg:hover {
+.section1 .info .info-text .p-l-icon svg:hover{
   fill: var(--secondary-color);
 }
 
@@ -430,28 +425,31 @@ header div nav button #light-mode {
   animation: appear2 0.5s ease-out;
   animation-timeline: view();
   animation-range: entry 0 cover 40%;
-  
 }
-/* From Uiverse.io by Sashank02 */ 
+/* From Uiverse.io by Sashank02 */
 
 .item:hover {
   translate: 0 -5px;
 }
-.item-x::before{
-  content: ' ';
+.item-x::before {
+  content: " ";
   top: var(--y);
   left: var(--x);
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   position: absolute;
-  background: radial-gradient(var(--secondary-color2),var(--secondary-color2),transparent,transparent);
+  background: radial-gradient(
+    var(--secondary-color2),
+    var(--secondary-color2),
+    transparent,
+    transparent
+  );
   height: 500px;
   width: 500px;
   opacity: 0;
   z-index: -1;
-  transition: 0.5s,top 0s,left 0s;
-
+  transition: 0.5s, top 0s, left 0s;
 }
-.item-x:hover::before{
+.item-x:hover::before {
   opacity: 0.3;
 }
 
@@ -460,7 +458,7 @@ header div nav button #light-mode {
   overflow: hidden;
   border-radius: 10px;
 }
-.item-image img{
+.item-image img {
   width: 100%;
   height: 100%;
   aspect-ratio: 3/2;
@@ -471,18 +469,16 @@ header div nav button #light-mode {
   font-size: 30px;
   font-weight: 700;
 
-
   margin: 1rem 0;
   text-align: center;
-
 }
-.item-title a{
+.item-title a {
   text-decoration: none;
   color: var(--secondary-color);
   text-transform: uppercase;
   cursor: pointer;
 }
-.item-title a:hover{
+.item-title a:hover {
   color: var(--links-back);
 }
 .item-body {
@@ -512,6 +508,157 @@ header div nav button #light-mode {
   grid-row: 1 / span 6; /* Span 6 rows */
 }
 
+/* contact section */
+
+/* styles.css */
+
+.section4 {
+  padding: 0 5rem;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-2);
+}
+.contact-form-container,
+.contact-image {
+  background-color: var(--background-2);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  min-height: 600px;  
+  border: 2px dashed var(--secondary-color2);
+}
+.contact-form-container{
+  animation: appear 0.5s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+.contact-image {
+  background: url(image&icon/contactImage.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: appear1 0.5s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+.contact-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; /* Uses the same background image */
+  filter: blur(10px); /* Adjust blur intensity */
+  z-index: 1;
+  transform: scale(1.1); /* Slight zoom to avoid edges showing */
+}
+.contact-image div{
+  z-index: 2;
+}
+.contact-image div h1{
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-color2);
+  padding-bottom: 2rem;
+}
+.accounts2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+}
+.accounts2 a{
+  padding: 1rem 0;
+}
+.accounts2 a svg{
+  fill: var(--secondary-color2);
+}
+.accounts2 a:hover svg {
+ fill: var(--icon-fill2);
+}
+.contact-form-container:hover,.contact-image:hover {
+  transform: translateY(-10px);
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--primary-text);
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--secondary-text);
+}
+
+.form-group input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--secondary-color2);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: var(--primary-text);
+  background-color: var(--background);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  display: none; /* Hidden by default */
+}
+
+.submit-button {
+  background-color: var(--secondary-color2);
+  color: var(--background);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: var(--background);
+  color: var(--secondary-color2);
+  border: 2px dashed var(--secondary-color2);
+}
+
+/* //////////// */
+footer{
+  min-height: 150px;
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 4rem;
+  color:var(--primary-text);
+}
 @media (max-width: 1350px) {
   .section2 .div-about .about-text h1 {
     font-size: 30px;
@@ -617,8 +764,19 @@ header div nav button #light-mode {
   .item-body {
     font-size: 15px;
   }
-  .item-title{
+  .item-title {
     font-size: 25px;
+  }
+
+  footer{
+    min-height: 150px;
+    background-color: var(--background);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding-right: 0;
+    padding-top: 1rem;
+    color:var(--primary-text);
   }
 }
 @media (max-width: 700px) {
@@ -636,6 +794,28 @@ header div nav button #light-mode {
   header div nav ul li a {
     font-size: 15px;
     padding: 0 5px;
+  }
+  .section4 {
+    padding: 2rem 1rem;
+    min-height: 1100px;
+    flex-direction: column-reverse;
+  }
+  .contact-form-container,
+  .contact-image {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    height: 600px;
+    min-height: 300px;
+  }
+  .contact-image {
+    height: 300px;
+  }
+  .accounts2{
+    justify-content: space-between;
+    flex-direction: row;
+    height: 100px;
   }
 }
 @media (max-width: 800px) {
@@ -734,7 +914,7 @@ header div nav button #light-mode {
     justify-content: center;
   }
   .item {
-    width: 80%; 
+    width: 80%;
     max-width: 500px;
   }
   .item-body {
