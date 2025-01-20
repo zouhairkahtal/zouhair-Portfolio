@@ -82,88 +82,95 @@ btn3.addEventListener("click", () => {
 const clickSound2 = new Audio();
 clickSound2.src = "/sound/on_off.mp3";
 /////////////////////////
-const lightmode = document.getElementById('light-mode')  
-const darkmode = document.getElementById('dark-mode')  
+const lightmode = document.getElementById("light-mode");
+const darkmode = document.getElementById("dark-mode");
 
-darkmode.addEventListener('click',()=>{
-    lightmode.style.display="block"
-    darkmode.style.display="none"
-    document.body.classList.add('darkmode')
-})
-lightmode.addEventListener('click',()=>{
-    lightmode.style.display="none"
-    darkmode.style.display="block"
-    document.body.classList.remove('darkmode')
-})
+darkmode.addEventListener("click", () => {
+  lightmode.style.display = "block";
+  darkmode.style.display = "none";
+  document.body.classList.add("darkmode");
+});
+lightmode.addEventListener("click", () => {
+  lightmode.style.display = "none";
+  darkmode.style.display = "block";
+  document.body.classList.remove("darkmode");
+});
 ////////////////////////////////////////////
 
-let cards = document.querySelectorAll(".item")
-cards.forEach(card =>{
-    card.onmousemove = function(e){
-        card.classList.add('item-x')
-        let x = e.pageX - card.offsetLeft;
-        let y = e.pageY - card.offsetTop;
+let cards = document.querySelectorAll(".item");
+cards.forEach((card) => {
+  card.onmousemove = function (e) {
+    card.classList.add("item-x");
+    let x = e.pageX - card.offsetLeft;
+    let y = e.pageY - card.offsetTop;
 
-        card.style.setProperty('--x',x+'px')
-        card.style.setProperty('--y',y+'px')
-    } 
-    card.onmouseout = function(e){
-        card.classList.remove('item-x')
-    } 
-})
+    card.style.setProperty("--x", x + "px");
+    card.style.setProperty("--y", y + "px");
+  };
+  card.onmouseout = function (e) {
+    card.classList.remove("item-x");
+  };
+});
+
+
 
 // contact section//
 // scripts.js
 
-document.getElementById('contactForm').addEventListener('submit', function (event) {
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
     event.preventDefault();
 
     // Clear previous errors
-    const errorElements = document.querySelectorAll('.error-message');
-    errorElements.forEach(el => el.style.display = 'none');
+    const errorElements = document.querySelectorAll(".error-message");
+    errorElements.forEach((el) => (el.style.display = "none"));
 
     // Get form values
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const message = document.getElementById('message').value.trim();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
 
     // Validation flags
     let isValid = true;
 
     // Name validation
-    if (name === '') {
-        document.getElementById('nameError').textContent = 'Name is required';
-        document.getElementById('nameError').style.display = 'block';
-        isValid = false;
+    if (name === "") {
+      document.getElementById("nameError").textContent = "Name is required";
+      document.getElementById("nameError").style.display = "block";
+      isValid = false;
     }
 
     // Email validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email === '' || !emailPattern.test(email)) {
-        document.getElementById('emailError').textContent = 'Valid email is required';
-        document.getElementById('emailError').style.display = 'block';
-        isValid = false;
+    if (email === "" || !emailPattern.test(email)) {
+      document.getElementById("emailError").textContent =
+        "Valid email is required";
+      document.getElementById("emailError").style.display = "block";
+      isValid = false;
     }
 
     // Phone validation
     const phonePattern = /^[0-9]{10}$/;
-    if (phone === '' || !phonePattern.test(phone)) {
-        document.getElementById('phoneError').textContent = 'Valid phone number is required';
-        document.getElementById('phoneError').style.display = 'block';
-        isValid = false;
+    if (phone === "" || !phonePattern.test(phone)) {
+      document.getElementById("phoneError").textContent =
+        "Valid phone number is required";
+      document.getElementById("phoneError").style.display = "block";
+      isValid = false;
     }
 
     // Message validation
-    if (message === '') {
-        document.getElementById('messageError').textContent = 'Message is required';
-        document.getElementById('messageError').style.display = 'block';
-        isValid = false;
+    if (message === "") {
+      document.getElementById("messageError").textContent =
+        "Message is required";
+      document.getElementById("messageError").style.display = "block";
+      isValid = false;
     }
 
     // If form is valid, you can submit it or perform any other action
     if (isValid) {
-        alert('Form submitted successfully!');
-        // You can also submit the form here using AJAX or similar methods
+      alert("Form submitted successfully!");
+      // You can also submit the form here using AJAX or similar methods
     }
-});
+  });

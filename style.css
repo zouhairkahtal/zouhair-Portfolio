@@ -173,18 +173,29 @@ header div nav button #light-mode {
   align-items: center;
   justify-content: space-between;
 }
-.section1 .info .info-text .p-l-icon svg:hover{
+.section1 .info .info-text .p-l-icon svg:hover {
   fill: var(--secondary-color);
 }
 
 .section1 .info-image {
   width: 50%;
   height: 100%;
-  overflow: hidden;
+
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding: 1rem;
   animation: appear1 0.5s ease-out;
+}
+
+.section1 .info-image img {
+  transition: transform 0.3s, filter 0.3s;
+  cursor: pointer;
+  animation: mymove2 5s infinite ease-out;
+}
+.section1 .info-image img:hover {
+  transform: scale(1.02); /* Zoom effect */
+  filter: brightness(1.1); /* Brightness effect */
 }
 .section1 .info-image img {
   /* width: 20rem;
@@ -365,6 +376,13 @@ header div nav button #light-mode {
     -moz-box-shadow: 0px 10px 13px 0px rgba(16, 185, 129, 0.36);
   }
 }
+@keyframes mymove2 {
+  50% {
+    -webkit-box-shadow: 0px 0px 24px 2px rgba(16,185,129,1);
+    -moz-box-shadow: 0px 0px 24px 2px rgba(16,185,129,1);
+    box-shadow: 0px 0px 24px 2px rgba(16,185,129,1);
+  }
+}
 @keyframes appear {
   from {
     opacity: 0;
@@ -425,6 +443,7 @@ header div nav button #light-mode {
   animation: appear2 0.5s ease-out;
   animation-timeline: view();
   animation-range: entry 0 cover 40%;
+  max-height: 500px;
 }
 /* From Uiverse.io by Sashank02 */
 
@@ -443,8 +462,8 @@ header div nav button #light-mode {
     transparent,
     transparent
   );
-  height: 500px;
-  width: 500px;
+  height: 100px;
+  width: 100px;
   opacity: 0;
   z-index: -1;
   transition: 0.5s, top 0s, left 0s;
@@ -487,7 +506,6 @@ header div nav button #light-mode {
   font-size: 18px;
   margin-bottom: 5px;
 }
-
 /* Item spanning all rows */
 .item-1 {
   grid-row: 1 / span 6; /* Span 6 rows */
@@ -507,13 +525,9 @@ header div nav button #light-mode {
 .item-4 {
   grid-row: 1 / span 6; /* Span 6 rows */
 }
-
-/* contact section */
-
-/* styles.css */
-
 .section4 {
   padding: 0 5rem;
+  gap: 1rem;
   width: 100%;
   height: 100vh;
   min-height: 600px;
@@ -529,7 +543,7 @@ header div nav button #light-mode {
   border-radius: 8px;
   max-width: 600px;
   width: 100%;
-  min-height: 600px;  
+  min-height: 600px;
   border: 2px dashed var(--secondary-color2);
 }
 .contact-form-container{
@@ -551,7 +565,7 @@ header div nav button #light-mode {
   animation-range: entry 0 cover 40%;
 }
 .contact-image::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -562,35 +576,33 @@ header div nav button #light-mode {
   z-index: 1;
   transform: scale(1.1); /* Slight zoom to avoid edges showing */
 }
-.contact-image div{
+.contact-image div {
   z-index: 2;
 }
-.contact-image div h1{
+.contact-image div h1 {
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--secondary-color2);
   padding-bottom: 2rem;
 }
-.accounts2{
+.accounts2 {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 300px;
 }
-.accounts2 a{
+.accounts2 a {
   padding: 1rem 0;
 }
-.accounts2 a svg{
+.accounts2 a svg {
   fill: var(--secondary-color2);
 }
 .accounts2 a:hover svg {
- fill: var(--icon-fill2);
+  fill: var(--icon-fill2);
 }
-.contact-form-container:hover,.contact-image:hover {
-  transform: translateY(-10px);
-}
+
 
 h2 {
   margin-top: 0;
@@ -650,14 +662,14 @@ textarea {
 }
 
 /* //////////// */
-footer{
+footer {
   min-height: 150px;
   background-color: var(--background);
   display: flex;
   align-items: center;
   justify-content: end;
   padding-right: 4rem;
-  color:var(--primary-text);
+  color: var(--primary-text);
 }
 @media (max-width: 1350px) {
   .section2 .div-about .about-text h1 {
@@ -768,7 +780,7 @@ footer{
     font-size: 25px;
   }
 
-  footer{
+  footer {
     min-height: 150px;
     background-color: var(--background);
     display: flex;
@@ -776,7 +788,7 @@ footer{
     justify-content: center;
     padding-right: 0;
     padding-top: 1rem;
-    color:var(--primary-text);
+    color: var(--primary-text);
   }
 }
 @media (max-width: 700px) {
@@ -812,7 +824,7 @@ footer{
   .contact-image {
     height: 300px;
   }
-  .accounts2{
+  .accounts2 {
     justify-content: space-between;
     flex-direction: row;
     height: 100px;
@@ -919,5 +931,14 @@ footer{
   }
   .item-body {
     margin-bottom: 2rem;
+  }
+}
+@media (min-height: 1040px) {
+  .section3,.section1,.section2,.section4 {
+    max-height: 1000px;
+    align-content: center;
+  }
+  header div{
+    max-width: 3000px;
   }
 }
