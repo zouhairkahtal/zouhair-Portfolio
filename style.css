@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Public Sans", serif;
+  font-family: "Open Sans", sans-serif;
   transition: 180ms ease-out;
   scroll-behavior: smooth;
 }
@@ -82,6 +82,7 @@ header div nav h1::first-letter {
 }
 .name {
   color: var(--secondary-color);
+    font-family: "Playwrite RO", cursive;
 }
 header div nav h1:hover {
   transform: scale(1.05);
@@ -261,6 +262,8 @@ header div nav button #light-mode {
   /* background-color: var(--secondary-color); Gold background */
   color: var(--secondary-color);
   user-select: none;
+  font-family: "Playwrite RO", cursive;
+
 }
 .uppercase {
   text-transform: uppercase;
@@ -670,6 +673,10 @@ footer {
   justify-content: end;
   padding-right: 4rem;
   color: var(--primary-text);
+  
+}
+footer p{
+  font-family: "Playwrite RO", cursive;
 }
 @media (max-width: 1350px) {
   .section2 .div-about .about-text h1 {
@@ -748,21 +755,31 @@ footer {
   }
 }
 @media (max-width: 550px) {
-  header div {
+  header{
     width: 100%;
-    border-radius: 0;
+    
+  }
+  header div {
+    
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+  }
+  header div nav{
+    width: 90%; 
     box-shadow: 0px 0px 6px 2px rgba(16, 185, 129, 1);
     -webkit-box-shadow: 0px 0px 6px 2px rgba(16, 185, 129, 1);
     -moz-box-shadow: 0px 0px 6px 2px rgba(16, 185, 129, 1);
   }
-  header div nav {
-    border-radius: 0;
-  }
+
   .active {
     background-color: transparent;
   }
   header {
-    bottom: 0px;
+    bottom: 10px;
   }
   .a-span {
     display: none;

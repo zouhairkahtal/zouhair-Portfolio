@@ -99,6 +99,7 @@ lightmode.addEventListener("click", () => {
 
 let cards = document.querySelectorAll(".item");
 cards.forEach((card) => {
+  
   card.onmousemove = function (e) {
     card.classList.add("item-x");
     let x = e.pageX - card.offsetLeft;
