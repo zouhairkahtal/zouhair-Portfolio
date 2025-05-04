@@ -1,0 +1,1 @@
+gsap.to(".logo",{duration:1,x:200})

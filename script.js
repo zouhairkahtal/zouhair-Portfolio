@@ -99,7 +99,6 @@ lightmode.addEventListener("click", () => {
 
 let cards = document.querySelectorAll(".item");
 cards.forEach((card) => {
-  
   card.onmousemove = function (e) {
     card.classList.add("item-x");
     let x = e.pageX - card.offsetLeft;
@@ -112,8 +111,6 @@ cards.forEach((card) => {
     card.classList.remove("item-x");
   };
 });
-
-
 
 // contact section//
 // scripts.js
@@ -175,3 +172,15 @@ document
       // You can also submit the form here using AJAX or similar methods
     }
   });
+//  animation
+gsap.from(".logo", {
+  duration: 1.5,
+  x: 90,
+  ease: "power1.inOut",
+  opacity:0
+});
+gsap.from(".me",{
+  duration:1,
+  rotation:10,
+  ease:"power1.inOut"
+})
