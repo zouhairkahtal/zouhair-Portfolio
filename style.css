@@ -809,6 +809,10 @@ footer p{
   }
 }
 @media (max-width: 700px) {
+  body{
+    touch-action: pan-y;
+
+  }
   header div {
     width: 99%;
   }
