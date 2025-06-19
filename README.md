@@ -25,7 +25,7 @@ Feel free to reach out via:
 
 
 - [GitHub](https://github.com/zouhairkahtal)
-- [Email](mailto:mizouhair4@gmail.com)
+- [Email](mizouhair4@gmail.com)
 
 ## 🚀 Setup Locally
 
