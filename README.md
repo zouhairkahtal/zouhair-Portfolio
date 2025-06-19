@@ -19,13 +19,6 @@ This is a simple and elegant portfolio page showcasing my projects, contact info
 - Contact section with social links
 - Scroll animations and transitions
 
-## 📬 Contact
-
-Feel free to reach out via:
-
-
-- [GitHub](https://github.com/zouhairkahtal)
-- [Email](mizouhair4@gmail.com)
 
 ## 🚀 Setup Locally
 
